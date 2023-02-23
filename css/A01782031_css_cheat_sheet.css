@@ -24,7 +24,7 @@
 }
 
 #background-image {
-  height: 200px;
+  height: 250px;
   background-image: url("https://www.w3schools.com/css/img_tree.png");
 }
 
@@ -37,15 +37,60 @@
 }
 
 #font-family {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 #font-style {
   font-style: italic;
 }
 
-/* #font-weigth {
-  font-style: normal;
+#font-weight {
   font-weight: bold;
-} */
+}
 
+#width {
+  background-color: black;
+  color: aqua;
+  width: 50px;
+}
+
+#height {
+  background-color: black;
+  color: aqua;
+  height: 50px;
+}
+
+#list-style-square {
+  list-style-type: square;
+}
+
+#list-style-circle {
+  list-style-type: circle;
+}
+
+#margin {
+  margin: 50px;
+  background-color: rgb(191, 179, 179);
+}
+
+#padding {
+  padding: 50px;
+
+  background-color: rgb(191, 179, 179);
+}
+
+#overflow {
+  overflow: auto;
+}
+
+#display {
+  display: inline;
+}
+
+#position {
+  position: absolute;
+}
+
+#filter {
+  filter: blur(2px);
+}
