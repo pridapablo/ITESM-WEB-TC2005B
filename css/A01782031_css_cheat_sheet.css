@@ -1,0 +1,51 @@
+#border {
+  border: 1px solid black;
+}
+
+#border-left {
+  border-left: 7px solid blue;
+}
+
+#border-right {
+  border-right: 7px solid blue;
+}
+
+#border-top {
+  border-top: 7px solid blue;
+}
+
+#border-bottom {
+  border-bottom: 7px solid blue;
+}
+
+#border-radius {
+  border: 2px dotted green;
+  border-radius: 10px;
+}
+
+#background-image {
+  height: 200px;
+  background-image: url("https://www.w3schools.com/css/img_tree.png");
+}
+
+#color {
+  color: rgb(96, 105, 212);
+}
+
+#font {
+  font: 20px Arial, sans-serif, bold;
+}
+
+#font-family {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#font-style {
+  font-style: italic;
+}
+
+/* #font-weigth {
+  font-style: normal;
+  font-weight: bold;
+} */
+
