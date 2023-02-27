@@ -52,10 +52,13 @@ html {
     "title title"
     ". .";
   gap: 10px;
-  padding: 10px;
-  background-color: rgb(246, 222, 246);
+
 }
 
 #grid1-h {
   grid-area: title;
+}
+
+.colorize{
+  background-color: #a5d1e3;
 }
