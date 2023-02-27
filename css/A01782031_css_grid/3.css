@@ -15,9 +15,10 @@ html {
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
     "double double double1 double1"
-    "triple triple triple1 triple1"
-    "triple triple triple1 triple1"
-    "triple triple triple1 triple1";
+    "double double double1 double1"
+    "single triple triple triple"
+    "single triple triple triple"
+    "footer footer footer footer";
   gap: 10px;
   padding: 10px;
   background-color: rgb(220, 149, 220);

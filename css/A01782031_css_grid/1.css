@@ -12,7 +12,7 @@ html {
   display: grid;
   height: 100vh;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 10px;
   padding: 10px;
   background-color: rgb(220, 149, 220);
@@ -45,4 +45,3 @@ html {
 .grid-item:nth-child(6) {
   background-color: #62c8f0;
 }
-
