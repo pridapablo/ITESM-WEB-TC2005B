@@ -62,3 +62,19 @@ html {
 .colorize{
   background-color: #a5d1e3;
 }
+
+.grid-item:nth-child(1) {
+  background-color: #f0c862;
+}
+
+.grid-item:nth-child(2) {
+  background-color: #62f0c8;
+}
+
+.grid-item:nth-child(3) {
+  background-color: #ffd4f3;
+}
+
+.grid-item:nth-child(4) {
+  background-color: #8682f4;
+}
