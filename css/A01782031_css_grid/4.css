@@ -11,8 +11,12 @@ html {
 .grid-container {
   display: grid;
   height: 100vh;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "double double double1 double1"
+    "triple triple triple1 triple1"
+    "triple triple triple1 triple1";
   gap: 10px;
   padding: 10px;
   background-color: rgb(220, 149, 220);
@@ -21,4 +25,37 @@ html {
 .grid-item {
   padding: 10px;
   background-color: #62c8f0;
+}
+
+#grid-double {
+  grid-area: double;
+}
+
+#grid-double1 {
+  grid-area: double1;
+}
+
+#grid-triple {
+  grid-area: triple;
+}
+
+#grid-triple1 {
+  grid-area: triple1;
+}
+
+.grid-container1 {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "title title"
+    ". .";
+  gap: 10px;
+  padding: 10px;
+  background-color: rgb(246, 222, 246);
+}
+
+#grid1-h {
+  grid-area: title;
 }
