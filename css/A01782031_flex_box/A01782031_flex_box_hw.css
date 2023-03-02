@@ -21,11 +21,13 @@ h2 {
 
 p {
   color: white;
+  /* light font */
+  font-weight: 300;
 }
 
 .grid-item {
-  border: 1px solid black;
-  background-color: #4b4b4b;
+  /* border: 1px solid black; */
+  background-color: rgb(36, 63, 74);
 }
 
 .grid-container {
@@ -71,6 +73,9 @@ p {
 
 #hero {
   grid-area: hero;
+  background-color: rgb(185, 125, 50);
+  /* add padding 30% */
+  padding: 10%;
 }
 
 #call2action {
@@ -80,6 +85,20 @@ p {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+}
+
+#call2action p {
+  font-weight: bold;
+}
+
+form input[type="submit"] {
+  background-color: rgb(185, 125, 50);
+  color: white;
+  border: none;
+  padding: 4px;
+  border-radius: 2px;
+  font-weight: bold;
 }
 
 .lang {
@@ -94,6 +113,7 @@ p {
 
 .lang p {
   color: black;
+  font-size: 0.8em;
 }
 
 #lang1 {
