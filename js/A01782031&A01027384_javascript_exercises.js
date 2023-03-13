@@ -136,10 +136,10 @@ function centralTendencies(arr) {
   let median;
   if (arr.length % 2 == 0) {
     median = (arr[arr.length / 2] + arr[arr.length / 2 + 1]) / 2;
-  } else{
+  } else {
     median = arr[(arr.length + 1) / 2];
   }
-  
+
   for (let i = 0; i < arr.length; i++) {
     let count = 0;
     for (let j = 0; j < arr.length; j++) {
@@ -155,27 +155,33 @@ function centralTendencies(arr) {
 }
 
 // 13. Escribe una función que tome una lista de cadenas de texto y devuelva la cadena más frecuente.
-function mostFrequent(params) {}
+function mostFrequent(arr) {
+  let hash = {};
+  let mostfq = arr[0];
+  for (let el of arr) {
+    hash[el] ? hash[el]++ : (hash[el] = 1);
+    hash[el] > hash[mostfq] ? (mostfq = el) : null;
+  }
+  return mostfq;
+}
 
 // 14. Escribe una función que tome un número y devuelva verdadero si es una potencia de dos, falso de lo contrario.
 function isPowerOfTwo(int) {
-  int = int/2;
+  int = int / 2;
   console.log(int);
-  if (int%2 == 0) {
+  if (int % 2 == 0) {
     isPowerOfTwo(int);
-  }
-  else if (int == 1) {
+  } else if (int == 1) {
     console.log("true");
     return true;
-  }
-  else{
+  } else {
     console.log("false");
     return false;
   }
 }
 
 // 15. Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.
-function sortDescending(arr)  {
+function sortDescending(arr) {
   let sorted = false;
   while (!sorted) {
     sorted = true;
@@ -190,7 +196,6 @@ function sortDescending(arr)  {
   }
   return arr;
 }
-
 
 // Ejecución de las funciones
 // 1
@@ -257,7 +262,9 @@ console.log(centralTendencies([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 console.log(
   "13. Escribe una función que tome una lista de cadenas de texto y devuelva la cadena más frecuente."
 );
-console.log(mostFrequent(["Hola", "soy", "Pablo"]));
+console.log(
+  mostFrequent(["Hola", "soy", "Pablo", "Pablo", "y", "tengo", "21"])
+);
 // 14
 console.log(
   "14. Escribe una función que tome un número y devuelva verdadero si es una potencia de dos, falso de lo contrario."
