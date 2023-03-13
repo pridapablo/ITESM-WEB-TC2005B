@@ -119,8 +119,11 @@ function shortestString(arr) {
 }
 
 // 10. Escribe una función que revise si una cadena de texto es un palíndromo o no.
-function isPalindrome(str) {}
-
+function esPalindromo(str) {
+  let str2;
+  str2 = str.toLowerCase().split("").reverse().join("");
+  return str2 === str.toLowerCase();
+}
 // 11. Escribe una función que tome una lista de cadena de textos y devuelva una nueva lista con todas las cadenas en orden alfabético.
 function alphabetize(arr) {
   // arr.sort(); // no usar este metodo
@@ -128,13 +131,48 @@ function alphabetize(arr) {
 }
 
 // 12. Escribe una función que tome una lista de números y devuelva la mediana y la moda.
-function centralTendencies(params) {}
+function centralTendencies(arr) {
+  let mode;
+  let median;
+  if (arr.length % 2 == 0) {
+    median = (arr[arr.length / 2] + arr[arr.length / 2 + 1]) / 2;
+  } else{
+    median = arr[(arr.length + 1) / 2];
+  }
+  
+  for (let i = 0; i < arr.length; i++) {
+    let count = 0;
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] == arr[j]) {
+        count++;
+      }
+    }
+    if (count > mode) {
+      mode = arr[i];
+    }
+  }
+  return [median, mode];
+}
 
 // 13. Escribe una función que tome una lista de cadenas de texto y devuelva la cadena más frecuente.
 function mostFrequent(params) {}
 
 // 14. Escribe una función que tome un número y devuelva verdadero si es una potencia de dos, falso de lo contrario.
-function isPowerOfTwo(params) {}
+function isPowerOfTwo(int) {
+  int = int/2;
+  console.log(int);
+  if (int%2 == 0) {
+    isPowerOfTwo(int);
+  }
+  else if (int == 1) {
+    console.log("true");
+    return true;
+  }
+  else{
+    console.log("false");
+    return false;
+  }
+}
 
 // 15. Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.
 function sortDescending(params) {}
