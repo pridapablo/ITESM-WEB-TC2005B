@@ -119,7 +119,7 @@ function shortestString(arr) {
 }
 
 // 10. Escribe una función que revise si una cadena de texto es un palíndromo o no.
-function esPalindromo(str) {
+function isPalindrome(str) {
   let str2;
   str2 = str.toLowerCase().split("").reverse().join("");
   return str2 === str.toLowerCase();
@@ -175,7 +175,22 @@ function isPowerOfTwo(int) {
 }
 
 // 15. Escribe una función que tome una lista de números y devuelva una nueva lista con todos los números en orden descendente.
-function sortDescending(params) {}
+function sortDescending(arr)  {
+  let sorted = false;
+  while (!sorted) {
+    sorted = true;
+    for (let i = 0; i < arr.length - 1; i++) {
+      if (arr[i] < arr[i + 1]) {
+        sorted = false;
+        let temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+      }
+    }
+  }
+  return arr;
+}
+
 
 // Ejecución de las funciones
 // 1
