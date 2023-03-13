@@ -44,15 +44,6 @@ function reverseArray(arr) {
 
 // Modificando el arreglo original
 function reverseArrayInPlace(arr) {
-  // // max and min indexi
-  // let max = arr.length;
-  // let min = 0;
-  // while (max > min) {
-  //   arr = arr.
-  //   max--;
-  //   min++;
-  // }
-
   if (arr.length == 1) {
     return arr;
   }
