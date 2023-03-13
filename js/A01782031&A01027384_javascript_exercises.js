@@ -154,16 +154,11 @@ function centralTendencies(arr) {
     median = arr[(arr.length + 1) / 2];
   }
 
-  for (let i = 0; i < arr.length; i++) {
-    let count = 0;
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[i] == arr[j]) {
-        count++;
-      }
-    }
-    if (count > mode) {
-      mode = arr[i];
-    }
+  let hash = {};
+  mode = arr[0];
+  for (let i of arr) {
+    hash[i] ? hash[i]++ : (hash[i] = 1);
+    hash[i] > hash[mode] ? (mode = i) : null;
   }
   return [median, mode];
 }
@@ -186,10 +181,8 @@ function isPowerOfTwo(int) {
   if (int % 2 == 0) {
     isPowerOfTwo(int);
   } else if (int == 1) {
-    console.log("true");
     return true;
   } else {
-    console.log("false");
     return false;
   }
 }
@@ -273,7 +266,7 @@ console.log(alphabetize(["Hola", "Pablo", "Alex", "es", "mi", "amigo"]));
 console.log(
   "12. Escribe una función que tome una lista de números y devuelva la mediana y la moda."
 );
-console.log(centralTendencies([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+console.log(centralTendencies([1, 2, 3, 3, 5, 2, 1, 3, 7]));
 // 13
 console.log(
   "13. Escribe una función que tome una lista de cadenas de texto y devuelva la cadena más frecuente."
