@@ -33,12 +33,35 @@ function bubbleSort(arr) {
 }
 
 // 3. Escribe dos funciones: la primera que invierta un arreglo de números y regrese un nuevo arreglo con el resultado; la segunda que modifique el mismo arreglo que se pasa como argumento. No se permite usar la función integrada 'reverse'.
+// Sin modificar el arreglo original
 function reverseArray(arr) {
   let newArr = [];
   for (let i = arr.length - 1; i >= 0; i--) {
     newArr.push(arr[i]);
   }
   return newArr;
+}
+
+// Modificando el arreglo original
+function reverseArrayInPlace(arr) {
+  // // max and min indexi
+  // let max = arr.length;
+  // let min = 0;
+  // while (max > min) {
+  //   arr = arr.
+  //   max--;
+  //   min++;
+  // }
+
+  if (arr.length == 1) {
+    return arr;
+  }
+  const temp = arr[0];
+  arr = arr.slice(1);
+  arr = reverseArrayInPlace(arr);
+  arr.push(temp);
+
+  return arr;
 }
 
 // 4. Escribe una función que reciba una cadena de texto y regrese una nueva con la primer letra de cada palabra en mayúscula.
@@ -213,6 +236,8 @@ console.log(
   "3. Escribe dos funciones: la primera que invierta un arreglo de números y regrese un nuevo arreglo con el resultado; la segunda que modifique el mismo arreglo que se pasa como argumento. No se permite usar la función integrada 'reverse'."
 );
 console.log(reverseArray([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+console.log(reverseArrayInPlace([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
 // 4
 console.log(
   "4. Escribe una función que reciba una cadena de texto y regrese una nueva con la primer letra de cada palabra en mayúscula."
