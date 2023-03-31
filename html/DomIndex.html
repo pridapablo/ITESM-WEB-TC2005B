@@ -293,6 +293,13 @@
       resultados antes de subirlos a tu repo.
     </p>
 
+    <!-- NOTA: Copilot oferció soluciones utilizando "script" tags directamente
+      en el HTML, sin embargo, esto es incorrecto por convenciones de estilo, 
+      por lo cual se modificó el código para que se agregue el script en el 
+      archivo JS (eventos_dom.js).
+     -->
+
+    <h4>Respuesta de ChatGPT</h4>
     <div class="container">
       <p>
         1. Modifica el siguiente elemento para mostrar la posición del mouse en
@@ -301,6 +308,18 @@
       <p id="mousePosition">Posición del mouse:</p>
     </div>
 
+    <h4>Respuesta de Copilot</h4>
+    <!-- Mostrar la posición del mouse en el documento -->
+    <div class="container">
+      <p>
+        1. Al mover el mouse, muestra la posición del mouse en el documento.
+      </p>
+      <div id="mouse-position"></div>
+    </div>
+    <!-- add javascript (fue usado para generar el script 
+      que se encuentra en eventos_dom.js) -->
+
+    <h4>Respuesta de ChatGPT</h4>
     <div class="container">
       <p>
         2. Al dar click al siguiente botón, obtén el nombre y apellido de las
@@ -314,12 +333,30 @@
         <input id="form1-submit" type="submit" value="Submit" />
       </form>
     </div>
+    <h4>Respuesta de Copilot</h4>
+    <div class="container">
+      <p>
+        2. Al dar click al siguiente botón, obtén el nombre y apellido de las
+        siguientes cajas de texto, y agrega, después del botón, un elemento que
+        tenga el nombre completo.
+      </p>
+      <form id="form2cp">
+        First name: <input id="form-fname1" type="text" name="fname" /><br />
+        Last name:
+        <input id="form-lnamecp" type="text" name="lname" /><br /><br />
+        <input id="form-submitcp" type="submit" value="Submit" />
+      </form>
+    </div>
+    <!-- add javascript so that when the user clicks on the submit button
+      (form-submitcp) an element under the form shows the first and last name of the user -->
 
     <div class="container">
       <p>
         3. Agrega el código para agregar una fila, o una columna, a la siguiente
         tabla al dar click al botón correspondiente.
       </p>
+
+      <h4>Respuesta de ChatGPT</h4>
       <table id="sampleTable">
         <tr>
           <td>Row 1 column 1</td>
@@ -333,6 +370,25 @@
       <br />
       <input id="btn-insert-r" type="button" value="Insert row" />
       <input id="btn-insert-c" type="button" value="Insert column" />
+
+      <h4>Respuesta de Copilot</h4>
+      <table id="sampleTablecp">
+        <tr>
+          <td>Row 1 column 1</td>
+          <td>Row 1 column 2</td>
+        </tr>
+        <tr>
+          <td>Row 2 column 1</td>
+          <td>Row 2 column 2</td>
+        </tr>
+      </table>
+      <br />
+      <input id="btn-insert-rcp" type="button" value="Insert row" />
+      <input id="btn-insert-ccp" type="button" value="Insert column" />
+
+      <!-- add javascript so that when the user clicks on the insert row button
+      (btn-insert-rcp) a new row is added to the table, and when the user clicks on 
+      the insert column button (btn-insert-ccp) a new column is added to the table -->
     </div>
 
     <div class="container">
@@ -342,6 +398,7 @@
         Al apretar el botón, actualiza el contenido de esa tabla en la posición
         que solicitaste, con la cadena de texto que solicitaste.
       </p>
+      <h4>Respuesta de ChatGPT</h4>
       <table id="myTable">
         <tr>
           <td>Row1 cell1</td>
@@ -366,6 +423,36 @@
         <input id="newValue" type="text" placeholder="New Value" />
         <input id="btn-change" type="button" value="Change content" />
       </form>
+
+      <h4>Respuesta de Copilot</h4>
+      <table id="myTable7cp">
+        <tr>
+          <td>Row1 cell1</td>
+          <td>Row1 cell2</td>
+          <td>Row1 cell3</td>
+        </tr>
+        <tr>
+          <td>Row2 cell1</td>
+          <td>Row2 cell2</td>
+          <td>Row2 cell3</td>
+        </tr>
+        <tr>
+          <td>Row3 cell1</td>
+          <td>Row3 cell2</td>
+          <td>Row3 cell3</td>
+        </tr>
+      </table>
+      <form>
+        <br />
+        <input id="rowIndex7cp" type="text" placeholder="Row Index" />
+        <input id="colIndex7cp" type="text" placeholder="Col Index" />
+        <input id="newValue7cp" type="text" placeholder="New Value" />
+        <input id="btn-change7cp" type="button" value="Change content" />
+      </form>
+
+      <!-- add javascript so that when the user clicks on the change content button
+      (btn-change7cp) the content of the table in the position specified by the user
+      is changed to the value specified by the user -->
     </div>
 
     <div class="container">
@@ -373,6 +460,7 @@
         5. Agrega el código para quitar o agregar elementos a la lista de
         opciones. Los colores pueden ser aleatorios.
       </p>
+      <h4>Respuesta de ChatGPT</h4>
       <form>
         <select id="colorSelect">
           <option>Red</option>
@@ -383,6 +471,22 @@
         <input id="btn-add-color" type="button" value="Add color" />
         <input id="btn-rmv-color" type="button" value="Remove color" />
       </form>
+
+      <h4>Respuesta de Copilot</h4>
+      <form>
+        <select id="colorSelectcp">
+          <option>Red</option>
+          <option>Green</option>
+          <option>White</option>
+          <option>Black</option>
+        </select>
+        <input id="btn-add-colorcp" type="button" value="Add color" />
+        <input id="btn-rmv-colorcp" type="button" value="Remove color" />
+      </form>
+
+      <!-- add color button event listener so that when the user clicks on the add color button
+      (btn-add-colorcp) a new color is added to the list of options, and when the user clicks on
+      the remove color button (btn-rmv-colorcp) a color is removed from the list of options -->
     </div>
 
     <div class="container">
@@ -393,16 +497,76 @@
         que generaste. El evento solo se dispara cuando el mouse entra en la
         imagen.
       </p>
+      <h4>Respuesta de ChatGPT</h4>
       <img id="imagenGato" src="http://placekitten.com/200/300" />
+
+      <h4>Respuesta de Copilot</h4>
+      <img id="imagenGatocp" src="http://placekitten.com/200/300" />
+
+      <!-- add mouseenter event listener so that when the user moves the mouse over the image
+      (imagenGatocp) a random width and height are generated between 300 and 600, and the image
+      is replaced with another similar image with the random width and height -->
     </div>
 
     <div class="container">
       <h2>Conclusiones</h2>
 
       <h4>Experiencia general</h4>
+      <p>
+        Mi experiencia general al realizar esta actividad utilizando las
+        diferentes herramientas de AI fue muy interesante. Por un lado, me di
+        cuenta que el código bien documentado o "boilerplate" es muy fácil de
+        hacer usando copilot y ChatGPT.
+      </p>
       <h4>¿Cuándo y para qué usarías ChatGPT y cuándo Copilot?</h4>
+      <p>
+        En general, creo que copilot es más útil para realizar ediciones básicas
+        directamente en código (como crear una función), o replicar líneas de
+        código con cambios secuenciales o que siguen algún patrón básico. Me
+        imagino (por ejemplo) que copilot apresuraría mucho la creación de
+        varios condicionales lógicos dentro de una función o un switch case.
+      </p>
+      <p>
+        Por otro lado, considero que ChatGPT es más útil para comprender
+        documentación o para hacer cambios más complejos (como migrar de una
+        librería a otra). Esto se debe a que en el prompt podemos dar contexto
+        (como copy pastear documentación) para hacerla más entendible e incluso
+        para realizar los cambios directamente en el códgio.
+      </p>
       <h4>Ventajas de usar AI para programar</h4>
+      <p>
+        Considero que la inteligencia artificial puede ser una gran herramienta
+        para programadores principiantes para comprender mejor ciertos conceptos
+        (en el caso de ChatGPT) o para realizar tareas repetitivas (en el caso
+        de copilot). Además, creo que la inteligencia artificial puede ayudar a
+        los programadores más experimentados a realizar tareas de manera más
+        rápida y eficiente.
+      </p>
       <h4>Desventajas de usar AI para programar</h4>
+      <p>
+        Personalmente creo que el problema es que la inteligencia artificial no
+        suele estar actualizada con las últimas convenciones de estilo ni con la
+        documentación más reciente. Esto puede generar problemas de calidad en
+        el código que se genera. Un ejemplo concreto, es que, tanto copilot como
+        ChatGPT, generaron código con declaraciones de variables "var" en lugar
+        de "let" o "const".
+      </p>
+
+      <p>
+        Por otro lado, creo que la inteligencia artificial no puede ser tan
+        flexible como un humano en cuanto a análisis de contexto. Esto aplica
+        especialmente para copilot, dado que no se le puede dar contexto más que
+        a través del mismo documento donde se está escribiendo el código (a
+        traves de comentarios).
+      </p>
+
+      <p>
+        Por último, creo que la inteligencia artificial es una herramienta que
+        debemos aprender a usar para comprender problemas más complejos y para
+        mejorar nuestra productividad, sin permitir que nos haga perder el
+        control y entendimiento de nuestro código por intentar emplearla para
+        resolvernos los problemas.
+      </p>
     </div>
   </body>
 </html>
