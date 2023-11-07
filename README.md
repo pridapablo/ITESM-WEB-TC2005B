@@ -25,11 +25,11 @@ Each homework assignment is contained within its respective directory:
 
 To explore my homework solutions, clone the repository and open the `index.html` file in a web browser:
 
-\```sh
+```sh
 git clone https://github.com/pridapablo/ITESM-WEB-TC2005B.git
 cd ITESM-WEB-TC2005B
 open index.html
-\```
+```
 
 ## Acknowledgments
 
